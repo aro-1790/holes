@@ -3,17 +3,23 @@
     "description": "An unofficial Facebook Messenger desktop client built with Tauri",
     "homepage": "https://github.com/rozsazoltan/messenger",
     "license": "MIT",
+    "notes": [
+        "To completely remove application data on uninstall, manually delete these folders:",
+        "$env:LOCALAPPDATA\\com.datarose.messenger-next",
+        "$env:APPDATA\\com.datarose.messenger-next",
+        "$env:APPDATA\\messenger-next"
+    ],
     "architecture": {
         "64bit": {
             "url": "https://github.com/rozsazoltan/messenger/releases/download/v1.9.0/messenger-next.msi",
             "hash": "6204d608d4f18afa9a75980fe417123d79b41a5dca6c4bc17233a81b6c0d1763",
-            "extract_dir": "SourceDir\\PFiles\\messenger-next"
+            "extract_dir": "PFiles\\messenger-next"
         }
     },
-    "bin": [
+    "shortcuts": [
         [
             "viewdock-messengernext.exe",
-            "messenger-next"
+            "Messenger Next"
         ]
     ],
     "installer": {
