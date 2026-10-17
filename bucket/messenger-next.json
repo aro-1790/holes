@@ -1,0 +1,32 @@
+{
+    "version": "1.9.0",
+    "description": "An unofficial Facebook Messenger desktop client built with Tauri",
+    "homepage": "https://github.com/rozsazoltan/messenger",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/rozsazoltan/messenger/releases/download/v1.9.0/messenger-next.msi",
+            "hash": "6204d608d4f18afa9a75980fe417123d79b41a5dca6c4bc17233a81b6c0d1763",
+            "extract_dir": "SourceDir\\PFiles\\messenger-next"
+        }
+    },
+    "bin": [
+        [
+            "viewdock-messengernext.exe",
+            "messenger-next"
+        ]
+    ],
+    "installer": {
+        "script": "Remove-Item \"$dir\\png\" -Recurse -Force -ErrorAction SilentlyContinue"
+    },
+    "checkver": {
+        "github": "https://github.com/rozsazoltan/messenger"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/rozsazoltan/messenger/releases/download/v$version/messenger-next.msi"
+            }
+        }
+    }
+}
