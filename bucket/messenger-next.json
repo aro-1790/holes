@@ -5,9 +5,9 @@
     "license": "MIT",
     "notes": [
         "To completely remove application data on uninstall, manually delete these folders:",
-        "$env:LOCALAPPDATA\\com.datarose.messenger-next",
-        "$env:APPDATA\\com.datarose.messenger-next",
-        "$env:APPDATA\\messenger-next"
+        "%LOCALAPPDATA%\\com.datarose.messenger-next",
+        "%APPDATA%\\com.datarose.messenger-next",
+        "%APPDATA%\\messenger-next"
     ],
     "architecture": {
         "64bit": {
